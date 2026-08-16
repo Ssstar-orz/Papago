@@ -1,0 +1,40 @@
+name: "PAPA GO · Quiet Translation"
+source: "Pi live interface inspection, adapted rather than copied"
+primary_mode: light
+brand_type: "ui-rich conversational product with content-rich restraint"
+philosophy: "A quiet room between impulse and action. Warm paper lowers the temperature; forest green marks agency, never correctness."
+tokens:
+  colors:
+    background: "#FAF3EA"
+    surface1: "#FCFAF7"
+    surface2: "#F7EFE4"
+    surface3: "#F3EADE"
+    border: "#E1D3C0"
+    border_visible: "#D9C9B4"
+    text1: "#131212"
+    text2: "#655E55"
+    text3: "#6F665A"
+    accent: "#1A4631"
+    accent_interactive: "#038247"
+    danger: "#A43C32"
+  typography:
+    display: "Noto Serif SC, Songti SC, Georgia, serif"
+    body: "DM Sans, Noto Sans SC, Microsoft YaHei, system-ui, sans-serif"
+  radii: { control: 10, card: 18, container: 28 }
+  elevation: "0 6px 24px -2px rgba(94,68,15,0.12)"
+hero_stage:
+  preset: flat-blank
+  background: { medium: absent, color_mode: brand-tinted-neutral, motion: static, intensity: subtle }
+  hero: { subject: composition, form: translation-fold, placement: off-center-right, scale: accent }
+  relation: { type: flat, bleed: 0 }
+  disclaimer: "No Pi logo, proprietary font, illustration, or icon asset is redistributed."
+interaction_signature:
+  grounding: "optional 30-second breathing circle; no breath hold; always skippable"
+  translation: "six editable layers: confirmed event, interpretation, emotion, body cue, need, protection"
+  second_translation: "adapt one editable draft to one or two observable receiving preferences; never infer personality or attachment style"
+  ai_source: "AI is explicit opt-in and visibly labeled; missing key, network failure, or timeout falls back to a visibly labeled local template"
+  inward_path: "three-step structured self-reflection after pause or no-talk; never presented as therapy"
+  voice_privacy: "browser speech recognition may use an online service; disclosure stays beside the microphone"
+iconography:
+  observed_style: "minimal outline, medium stroke, soft terminals, geometric, low density"
+  fallback_kit: "Lucide 2px; no runtime icon dependency is needed in this text-first MVP"

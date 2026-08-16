@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf3ea" />
+    <meta name="description" content="PAPA GO：把关系冲突中的一团情绪理成事实、感受与需要，再由你决定表达、暂停或不谈。" />
+    <title>PAPA GO · 关系语言翻译器</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="app-shell">
+      <aside class="side-rail" aria-label="PAPA GO 流程">
+        <button class="brand" type="button" data-action="reset" aria-label="回到开始并清除本次内容"><span class="brand-mark" aria-hidden="true">P</span><span class="brand-word">PAPA GO</span></button>
+        <div class="rail-copy"><p class="rail-kicker">RELATIONSHIP LANGUAGE TRANSLATOR</p><p>不是替你把话说得更讨喜。<br />是先把话还给你。</p></div>
+        <ol class="journey-list" aria-label="当前进度">
+          <li data-progress="input" class="is-current"><span>01</span>落地与记录</li><li data-progress="guide"><span>02</span>觉察</li><li data-progress="translation"><span>03</span>翻译自己</li><li data-progress="express"><span>04</span>决定下一步</li><li data-progress="completion"><span>05</span>继续照顾自己</li>
+        </ol>
+        <p class="rail-note">本地运行 · 刷新即清空</p>
+      </aside>
+      <div class="workspace">
+        <header class="app-header">
+          <div class="mode-badge" aria-label="当前为演示模式"><span class="mode-dot" aria-hidden="true"></span>演示模式 · 由你的选择生成</div>
+          <div class="header-actions"><button class="quiet-action" type="button" data-action="reset">清除本轮</button><button class="safety-action" type="button" data-action="safety-open">我现在感到不安全</button></div>
+        </header>
+        <main id="main-content" tabindex="-1">
+          <section id="view-input" class="view is-active" data-view="input" aria-labelledby="input-title">
+            <div class="hero-stage" aria-hidden="true"><span>PAUSE</span><span class="echo-line-two">NAME</span><span class="echo-line-three">CHOOSE</span></div>
+            <div class="hero-copy"><p class="eyebrow">先别急着回复</p><h1 id="input-title">把脱口而出的话，<br /><em>翻译回自己。</em></h1><p class="lead">先回到此刻，再记录一件刚发生的事。你会慢慢听见自己的想法、感受、身体反应和需要；最后，表达、暂停或不谈，都可以是完整答案。</p></div>
+            <div class="story-panel">
+              <div class="grounding-entry"><div><p class="card-label">30 秒回到此刻</p><p>如果情绪还很满，可以先跟着圆点呼吸三轮；不舒服就跳过。</p></div><button id="grounding-toggle" class="secondary-button" type="button" aria-expanded="false" aria-controls="grounding-practice">先停一下</button></div>
+              <div id="grounding-practice" class="grounding-practice" hidden><div id="breath-orbit" class="breath-orbit" aria-hidden="true"><span></span></div><div class="grounding-copy"><p id="breath-phase" class="breath-phase" aria-live="polite">按自己的节奏准备</p><p id="breath-time" class="field-help">约 30 秒 · 不需要憋气</p></div><div class="grounding-actions"><button id="breath-button" class="primary-button" type="button">开始三轮呼吸</button><button class="quiet-action" type="button" data-action="grounding-close">跳过，直接书写</button></div></div>
+              <div class="field-heading"><label for="story">此刻，你最想说什么？</label><span id="story-count">0 / 1,000</span></div>
+              <textarea id="story" rows="6" maxlength="1000" aria-describedby="story-help story-error" placeholder="不用组织好，也不用先讲道理。把那句卡在心里的话放在这里。"></textarea>
+              <div class="voice-row"><button id="voice-button" class="voice-button" type="button" aria-pressed="false" aria-describedby="voice-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><path d="M12 17v4M8 21h8"></path></svg><span id="voice-label">语音输入</span></button><span id="voice-status" class="voice-status" role="status" aria-live="polite">也可以直接说出来</span></div>
+              <p id="story-help" class="field-help">键盘输入不会自动保存；只有你之后主动勾选 AI，已经确认的内容才会发送。</p><p id="voice-privacy" class="privacy-note">语音识别由浏览器提供，可能把音频交给在线服务处理；不想发送语音时请使用键盘。</p><p id="story-error" class="field-error" role="alert"></p>
+              <div class="panel-actions"><button id="demo-button" class="secondary-button" type="button">填入演示案例</button><button id="start-button" class="primary-button" type="button">从这件事开始 <span class="button-arrow" aria-hidden="true">→</span></button></div>
+            </div>
+          </section>
+          <section id="view-guide" class="view" data-view="guide" aria-labelledby="guide-title">
+            <div class="view-grid"><div class="guide-main">
+              <div class="guide-topline"><button class="back-button" type="button" data-action="guide-back">← 返回</button><p><span id="guide-step-number">1</span> / 6</p></div><div class="progress-track" aria-hidden="true"><span id="guide-progress"></span></div>
+              <p id="guide-kicker" class="eyebrow">先看看发生了什么</p><h2 id="guide-title" tabindex="-1">如果只看聊天记录和已经发生的事，我们能确定什么？</h2><p id="guide-description" class="section-description">可以写下聊天里真实出现的文字、对方明确做过或没有做过的事，也可以写你亲眼看到、亲耳听到的内容。先不急着猜对方为什么这样。</p>
+              <div id="guide-content" class="guide-content"></div><p id="guide-error" class="field-error" role="alert"></p><div class="guide-actions"><button id="guide-continue" class="primary-button" type="button">继续 <span class="button-arrow" aria-hidden="true">→</span></button></div>
+            </div><aside class="confirmed-panel" aria-label="已经确认的内容"><p class="card-label">你已经确认</p><dl id="confirmed-list" class="confirmed-list"></dl><p class="confirmed-note">空白不是失败。暂时分不清，也是一种准确。</p></aside></div>
+          </section>
+          <section id="view-translation" class="view" data-view="translation" aria-labelledby="translation-title">
+            <div class="translation-heading"><div><p class="eyebrow">YOUR INNER TRANSLATION</p><h2 id="translation-title">这是你刚刚确认的内容。</h2><p class="section-description">它不是对你内心的判定。你可以继续改，直到它更像你的话。</p></div><button class="back-button" type="button" data-action="edit-guide">← 返回修改</button></div>
+            <article class="translation-card"><div class="fold-mark" aria-hidden="true"></div><p class="card-label">给自己的翻译</p><div class="translation-fields">
+              <label><span>已经发生的是</span><textarea id="card-fact" rows="2"></textarea></label><label><span>我脑中冒出的想法</span><textarea id="card-interpretation" rows="2"></textarea></label><label><span>我现在感到</span><textarea id="card-feelings" rows="2"></textarea></label><label><span>我留意到的身体感受</span><textarea id="card-body" rows="2"></textarea></label><label><span>对我来说很重要的是</span><textarea id="card-needs" rows="2"></textarea></label><label><span>情绪最满时，我最想</span><textarea id="card-protection" rows="2"></textarea></label>
+            </div><p class="card-caution">仅凭这段经历，我们无法判断对方的动机。</p></article>
+            <fieldset class="decision-fieldset"><legend>现在，哪一步更照顾你？</legend><div class="decision-grid">
+              <button class="decision-button" type="button" data-decision="express"><span class="decision-index">A</span><strong>我想表达</strong><small>把确认过的内容整理成一份草稿</small></button><button class="decision-button" type="button" data-decision="pause"><span class="decision-index">B</span><strong>我想先暂停</strong><small>不在情绪最满的时候做决定</small></button><button class="decision-button" type="button" data-decision="no-talk"><span class="decision-index">C</span><strong>我决定暂时不谈</strong><small>不沟通也可以是清楚的选择</small></button>
+            </div></fieldset>
+          </section>
+          <section id="view-express" class="view" data-view="express" aria-labelledby="express-title">
+            <div class="translation-heading"><div><p class="eyebrow">CHOOSE YOUR PURPOSE</p><h2 id="express-title">这段话，最想完成什么？</h2><p class="section-description">只选一个目标。温柔不是把自己的需要删掉，而是让事实、感受和边界更清楚。</p></div><button class="back-button" type="button" data-action="back-translation">← 返回选择</button></div>
+            <div class="express-layout"><div><section class="receiver-stage" aria-labelledby="receiver-title"><p class="card-label">第二次翻译</p><h3 id="receiver-title">TA 更容易接住哪种表达？</h3><p>只选 1–2 项。这里描述的是沟通方式，不是给 TA 贴人格标签；不确定也可以如实选择。</p><div id="receiver-options" class="receiver-options" role="group" aria-label="选择对方更容易接住的表达方式">
+              <button type="button" data-receiver="先说结论，再说明原因" aria-pressed="false"><strong>先说结论</strong><small>再说明发生了什么</small></button><button type="button" data-receiver="先说明这不是指责" aria-pressed="false"><strong>先让 TA 知道</strong><small>这不是指责或审判</small></button><button type="button" data-receiver="使用具体的事例和请求" aria-pressed="false"><strong>说得具体</strong><small>少用抽象感受和概括</small></button><button type="button" data-receiver="表达简短直接" aria-pressed="false"><strong>简短直接</strong><small>一次只说一件事</small></button><button type="button" data-receiver="留出时间，不要求立刻回复" aria-pressed="false"><strong>留一点时间</strong><small>不要求 TA 马上回复</small></button><button type="button" data-receiver="我不确定，不替 TA 下结论" aria-pressed="false"><strong>我不确定</strong><small>先不替 TA 判断</small></button><button class="receiver-other-button" type="button" data-receiver="__custom__" aria-pressed="false"><strong>其他，我自己写</strong><small>写下你观察到的接收偏好</small></button>
+            </div><div id="receiver-custom-field" class="receiver-custom-field" hidden><label for="receiver-custom">TA 可能更容易接住这样的表达</label><input id="receiver-custom" type="text" maxlength="80" placeholder="例如：先肯定我们都在意这段关系，再说具体问题"><p class="field-help">写沟通方式，不定义 TA 是什么样的人。这一项也计入最多两项。</p></div></section><fieldset class="goal-fieldset"><legend class="sr-only">选择沟通目标</legend><p class="card-label">这次沟通的目的</p><div id="goal-options" class="goal-options">
+              <button class="goal-button" type="button" data-goal="understand" aria-pressed="false"><span>01</span><strong>让对方理解我</strong><small>把发生的事、我的感受和需要说清楚</small></button><button class="goal-button" type="button" data-goal="request" aria-pressed="false"><span>02</span><strong>提出具体请求</strong><small>和对方商量一件可以明确回应的事</small></button><button class="goal-button" type="button" data-goal="boundary" aria-pressed="false"><span>03</span><strong>表达边界</strong><small>说清楚我会怎样照顾和保护自己</small></button>
+            </div></fieldset><div id="detail-field" class="detail-field" hidden><label id="detail-label" for="goal-detail">你希望对方具体做什么？</label><textarea id="goal-detail" rows="3"></textarea><p id="detail-help" class="field-help"></p></div><label class="ai-consent" for="ai-consent"><input id="ai-consent" type="checkbox"><span><strong>尝试用 AI 完成第二次翻译</strong><small>勾选后，本页已确认的内容会发送给已配置的 AI 服务；不勾选或连接失败时使用本地演示模板。</small></span></label><p id="goal-error" class="field-error" role="alert"></p><button id="generate-button" class="primary-button wide-button" type="button" disabled>生成这一份草稿 <span class="button-arrow" aria-hidden="true">→</span></button></div>
+              <article id="message-card" class="message-card is-empty" aria-live="polite"><div class="message-empty"><span aria-hidden="true">“</span><p>你的草稿会出现在这里。<br />它会结合你的目的和 TA 更容易接住的表达方式。</p></div><div class="message-ready" hidden><div class="message-card-topline"><p class="card-label">可以说给对方的话</p><span id="generation-source">本地演示模板 · 可编辑</span></div><textarea id="message-editor" rows="10" aria-label="可编辑的沟通草稿"></textarea><button id="copy-button" class="copy-button" type="button">复制这段话</button><p class="message-note">它不保证对方会理解，也不要求你现在发送。</p></div></article>
+            </div>
+          </section>
+          <section id="view-completion" class="view" data-view="completion" aria-labelledby="completion-title"><div class="completion-stage"><p id="completion-kicker" class="eyebrow">PAUSE IS A CHOICE</p><h2 id="completion-title">先停下来，不是失败。</h2><p id="completion-copy" class="completion-copy">你已经把正在发生的事放回了自己手里。此刻不需要再完成任何沟通任务。</p><blockquote id="completion-translation"></blockquote><div class="deep-talk-entry"><p><strong>先不谈怎么办，看看刚才的反应想替你守住什么。</strong><span>这里有三步自我觉察。它不分析人格，也不会催你马上采取行动。</span></p><button class="primary-button" type="button" data-action="reflection-start">继续看看自己 <span class="button-arrow" aria-hidden="true">→</span></button></div><div class="completion-actions"><button class="secondary-button" type="button" data-action="back-translation">返回刚才的选择</button><button class="quiet-action" type="button" data-action="reset">清除并重新开始</button></div></div></section>
+          <section id="view-reflection" class="view" data-view="reflection" aria-labelledby="reflection-title"><div class="reflection-layout"><div class="reflection-main"><div class="guide-topline"><button class="back-button" type="button" data-action="reflection-back">← 返回</button><p><span id="reflection-step-number">1</span> / 3</p></div><div class="progress-track reflection-progress" aria-hidden="true"><span id="reflection-progress"></span></div><p id="reflection-kicker" class="eyebrow">先理解，不急着改变</p><h2 id="reflection-title" tabindex="-1">刚才那股冲动，像是在替你守住什么？</h2><p id="reflection-description" class="section-description">也许是不想再失望、不想被忽略，也可能是在努力留住一段关系。你不必马上确定，只选最接近的一项。</p><div id="reflection-content" class="guide-content"></div><p id="reflection-error" class="field-error" role="alert"></p><div class="guide-actions"><button id="reflection-continue" class="primary-button" type="button">继续 <span class="button-arrow" aria-hidden="true">→</span></button></div></div><aside class="self-note-panel" aria-live="polite"><p class="card-label">给此刻的自己</p><div id="self-note-preview" class="self-note-preview"></div></aside></div></section>
+        </main>
+      </div>
+    </div>
+    <div id="safety-overlay" class="modal-overlay" hidden><section class="safety-modal" role="dialog" aria-modal="true" aria-labelledby="safety-title" aria-describedby="safety-description">
+      <div id="safety-question"><div class="modal-topline"><p class="eyebrow">SAFETY FIRST</p><button class="icon-button" type="button" data-action="safety-close" aria-label="关闭安全确认">×</button></div><h2 id="safety-title">先确认此刻的安全。</h2><p id="safety-description">下面哪一种更接近你现在的情况？你不需要在这里讲出更多细节。</p><div class="safety-options"><button type="button" data-safety="other-harm">我可能受到他人伤害、威胁、强迫、跟踪或限制自由，也可能不确定是否安全</button><button type="button" data-safety="self-harm">我可能马上伤害自己，或不能确定自己能否保持安全</button><button class="safe-choice" type="button" data-safety="safe">我现在安全，继续整理</button></div></div>
+      <div id="safety-support" hidden><p class="eyebrow">STOP THE CONVERSATION</p><h2 id="support-title" tabindex="-1">先停下来。</h2><p id="support-copy"></p><p id="support-note" class="support-note">PAPA GO 不能提供危机干预。你不需要在这里证明事情是否“足够严重”。</p><div class="support-actions"><a id="support-primary-call" class="primary-button" href="tel:110">拨打 110</a><a id="support-secondary-call" class="secondary-button" href="tel:120">拨打 120</a><button class="quiet-action danger-text" type="button" data-action="clear-and-exit">清除本次内容并回到首页</button></div></div>
+    </section></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div><script src="app.js"></script>
+  </body>
+</html>
